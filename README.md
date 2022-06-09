@@ -10,10 +10,6 @@ Vless & Vmess:
 
 **Risk of account blocking for abuse!**
 
-**Risk of account blocking for abuse!**
-
-**Risk of account blocking for abuse!**
-
 ![](show.png)
 
 ## Heroku部署问题
