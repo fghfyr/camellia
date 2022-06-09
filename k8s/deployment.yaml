@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: camellia
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: camellia
+  template:
+    metadata:
+      labels:
+        app: camellia
+    spec:
+      containers:
+      - image: okteto.dev/camellia:latest
+        name: camellia
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: ProxySite
+          value: ""
+        - name: Vless_UUID
+          value: "4539a8af-8fae-49ed-8371-8bd15b8262ed"
+        - name: Vless_Path
+          value: "/vless"
+        - name: Vmess_UUID
+          value: "4539a8af-8fae-49ed-8371-8bd15b8262ed"
+        - name: Vmess_Path
+          value: "/vmess"
+        - name: Share_Path
+          value: "/share520"
